@@ -1,14 +1,14 @@
-describe('orgDetails component', function () {
+describe('register component', function () {
   beforeEach(module('app', function ($provide) {
-    $provide.factory('orgDetails', function () {
+    $provide.factory('register', function () {
       return {
-        templateUrl: 'app/orgDetails.html'
+        templateUrl: 'app/account/register.html'
       };
     });
   }));
 
   it('should...', angular.mock.inject(function ($rootScope, $compile) {
-    var element = $compile('<orgDetails></orgDetails>')($rootScope);
+    var element = $compile('<register></register>')($rootScope);
     $rootScope.$digest();
     expect(element).not.toBeNull();
   }));

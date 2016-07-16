@@ -2,7 +2,7 @@ describe('login component', function () {
   beforeEach(module('app', function ($provide) {
     $provide.factory('login', function () {
       return {
-        templateUrl: 'app/login.html'
+        templateUrl: 'app/account/login.html'
       };
     });
   }));

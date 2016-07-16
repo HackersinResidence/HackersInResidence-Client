@@ -1,14 +1,14 @@
-describe('register component', function () {
+describe('residenceList component', function () {
   beforeEach(module('app', function ($provide) {
-    $provide.factory('register', function () {
+    $provide.factory('residenceList', function () {
       return {
-        templateUrl: 'app/register.html'
+        templateUrl: 'app/resideceList.html'
       };
     });
   }));
 
   it('should...', angular.mock.inject(function ($rootScope, $compile) {
-    var element = $compile('<register></register>')($rootScope);
+    var element = $compile('<residenceList></residenceList>')($rootScope);
     $rootScope.$digest();
     expect(element).not.toBeNull();
   }));

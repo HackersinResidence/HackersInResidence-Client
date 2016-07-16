@@ -54,7 +54,7 @@
     };
   }
   module.component("login", {
-    templateUrl: "app/components/login.html",
+    templateUrl: "app/components/account/login.html",
     controllerAs: "model",
     controller: ["$http", "$location", "authToken", "userProfile", "Validate", controller]
   });

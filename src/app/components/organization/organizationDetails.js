@@ -29,7 +29,7 @@
   }
 
   module.component("orgDetails", {
-    templateUrl: "app/components/organization/orgDetails.html",
+    templateUrl: "app/components/organization/organizationDetails.html",
     controllerAs: "model",
     controller: function ($http) {
       var model = this;

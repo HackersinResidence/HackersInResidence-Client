@@ -25,8 +25,8 @@
     };
   }
 
-  module.component("organization", {
-    templateUrl: "app/components/organization/organization.html",
+  module.component("organizationList", {
+    templateUrl: "app/components/organization/organizationList.html",
     controllerAs: "model",
     controller: ["$http", controller],
     bindings: {

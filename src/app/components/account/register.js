@@ -42,7 +42,7 @@
 
   }
   module.component("register", {
-    templateUrl: "app/components/register.html",
+    templateUrl: "app/components/account/register.html",
     controllerAs: "model",
     controller: ["$http", "$location", "authToken", "Validate", controller]
   });
