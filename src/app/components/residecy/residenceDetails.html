@@ -1,0 +1,12 @@
+<h3>{{model.residence.title}}</h3>
+
+<ul class="thumbnails">
+  <li ng-repeat="offer in model.offers" class="span5">
+    {{offer.label}} | {{offer.id}}
+  </li>
+</ul>
+<ul class="thumbnails">
+  <li ng-repeat="required in model.requires" class="span5">
+    {{required.label}} | {{required.id}}
+  </li>
+</ul>
