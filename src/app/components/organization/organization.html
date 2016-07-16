@@ -1,0 +1,10 @@
+<div class="component">
+  <ul class="thumbnails">
+        <li ng-repeat="org in model.organizations" class="span5">
+            {{org.name}} | {{org.id}}
+            <button ng-click="model.goTo(org.id)" class="btn btn-default">
+                    Ver
+                </button>
+        </li>
+    </ul>
+</div>

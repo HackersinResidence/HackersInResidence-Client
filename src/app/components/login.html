@@ -1,0 +1,19 @@
+<div id="login_view" ng-hide="model.isAuthenticated">
+  <form role="form" ng-submit="model.login(loginForm)" name="loginForm" novalidate>
+    <div class="form-group">
+      <label for="id_username">Username</label>
+      <input name="username" id="id_username" type="text" ng-model="model.user.username" placeholder="Username" class="form-control" required />
+    </div>
+    <div class="alert alert-danger" ng-repeat="error in model.errors.username">{{error}}</div>
+    <div class="form-group">
+      <label for="id_password">Password</label>
+      <input name="password" id="id_password" type="password" ng-model="model.user.password" placeholder="Password" class="form-control" required />
+    </div>
+    <div class="alert alert-danger" ng-repeat="error in model.errors.password">{{error}}</div>
+    <div class="alert alert-danger" ng-repeat="error in model.errors.non_field_errors">{{error}}</div>
+    <div class="alert alert-danger" ng-if="error">{{error}}</div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+<h3 ng-show="model.isAuthenticated">Logged as {{model.profile.username}}</h3>
+<button ng-show="model.isAuthenticated" ng-click="model.logout()" class="btn">Logout</button>
