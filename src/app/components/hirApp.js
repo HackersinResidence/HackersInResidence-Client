@@ -9,6 +9,7 @@ module.component("hirApp", {
     {path: "/organization", component: "organization", name: "Organization"},
     {path: "/detail/:id", component: "orgDetails", name: "OrgDetails"},
     {path: "/login", component: "login", name: "Login"},
+    {path: "/register", component: "register", name: "Register"},
     {path: "/**", redirectTo: ["App"]}
   ]
 });

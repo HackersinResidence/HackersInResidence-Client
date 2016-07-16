@@ -1,0 +1,31 @@
+<div id="register_view">
+    <div ng-if="model.completed == false">
+        <form role="form" name="registerForm" ng-submit="model.register(registerForm)" novalidate>
+            <div class="form-group">
+                <label for="id_username">Username</label>
+                <input name="username" id="id_username" class="form-control" type="text" ng-model="model.user.username" placeholder="Username" required />
+            </div>
+            <div class="alert alert-danger" ng-repeat="error in model.errors.username">{{error}}</div>
+            <div class="form-group">
+                <label for="id_password">Password</label>
+                <input name="password1" id="id_password1" class="form-control" type="password" ng-model="model.user.password1" placeholder="Password" required />
+            </div>
+            <div class="alert alert-danger" ng-repeat="error in model.errors.password1">{{error}}</div>
+            <div class="form-group">
+                <label for="id_password">Repeat Password</label>
+                <input name="password" id="id_password2" class="form-control" type="password" ng-model="model.user.password2" placeholder="Repeat Password" required />
+            </div>
+            <div class="alert alert-danger" ng-repeat="error in model.errors.password2">{{error}}</div>
+            <div class="form-group">
+                <label for="id_email">Email</label>
+                <input name="email" id="id_email" class="form-control" type="email" ng-model="model.user.email" placeholder="Email" required />
+            </div>
+            <div class="alert alert-danger" ng-repeat="error in model.errors.email">{{error}}</div>
+            <div class="alert alert-danger" ng-repeat="error in model.errors.non_field_errors">{{error}}</div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div ng-if="model.completed == true">
+        <div class="alert alert-success">Great!  You've just registered.  You should receive an email shortly with instructions on how to activate your account.</div>
+    </div>
+</div>

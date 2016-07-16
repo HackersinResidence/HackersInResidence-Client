@@ -1,6 +1,17 @@
 <h3>{{model.organization.name}}</h3>
 <ul class="thumbnails">
-      <li ng-repeat="residence in model.residencies" class="span5">
-          {{residence.title}} | {{residence.id}}
-      </li>
-  </ul>
+  <li ng-repeat="residence in model.residencies" class="span5">
+    {{residence.title}} | {{residence.id}}
+  </li>
+</ul>
+
+<ul class="thumbnails">
+  <li ng-repeat="image in model.images" class="span5">
+    {{image.image}} | {{image.id}}
+  </li>
+</ul>
+<ul class="thumbnails">
+  <li ng-repeat="video in model.videos" class="span5">
+    {{video.url}} | {{video.id}}
+  </li>
+</ul>
